@@ -1,8 +1,9 @@
+import type { JSX } from "react";
 import Card from '../Card/Card'
 
 type Props = {}
 
-const CardList = () => {
+const CardList: React.FC<Props> = (): JSX.Element => {
   return (
     <div>
         <Card companyName='Apple' ticker='AAPL' price={100} />
