@@ -1,7 +1,12 @@
-import React from "react";
 import "./Card.css";
 
-const Card = () => {
+interface Props {
+  readonly companyName: string;
+  readonly ticker: string;
+  readonly price: number 
+}
+
+const Card = ({ companyName, ticker, price }: Props) => {
   return (
     <div className="card">
       <img
@@ -9,8 +14,8 @@ const Card = () => {
         alt="Image"
       />
       <div className="details">
-        <h2>AAPL</h2>
-        <p>$110</p>
+        <h2>{companyName} {ticker}</h2>
+        <p>${price}</p>
       </div>
       <p className="info">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto sit
